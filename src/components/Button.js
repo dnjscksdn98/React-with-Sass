@@ -12,6 +12,7 @@ import "./Button.scss";
 
 // size: large, medium(default), small
 // color: blue(default), pink, gray
+// ...rest: bring the rest of the props
 function Button({ children, size, color, outline, fullWidth }) {
   return (
     // outline, fullWidth: if it's true, it will remain
