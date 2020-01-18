@@ -11,12 +11,19 @@ import "./Button.scss";
 // 'false, null, 0, undefined' is ignored
 
 // size: large, medium(default), small
-function Button({ children, size }) {
-  return <button className={classNames("btn", size)}>{children}</button>;
+// color: blue(default), pink, gray
+function Button({ children, size, color, outline, fullWidth }) {
+  return (
+    // outline, fullWidth: if it's true, it will remain
+    <button className={classNames("btn", size, color, { outline, fullWidth })}>
+      {children}
+    </button>
+  );
 }
 
 Button.defaultProps = {
-  size: "medium"
+  size: "medium",
+  color: "blue"
 };
 
 export default Button;
